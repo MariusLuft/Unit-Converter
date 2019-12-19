@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--links-->
+		<link href="stylesheet.css" rel="stylesheet">
+		<script src="Script.js" type="text/javascript"></script>
+		<link rel ="manifest" href ="manifest.json">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Weather PWA">
+		<link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+		<link rel="icon" href="/images/icons/icon-96x96.png">
+		<title>Mein Umrechner</title>
+	</head>
+	
+	<body>
+		<!--Headline-->
+		<h1>Einheitenrechner</h1>
+		
+		<div id="knoepfdiv" class="knoepfe">
+			<label for='kategorie'>Phys. Groesse:  </label>
+			<!--Selection of physical property-->
+			<div id="kat">
+				
+				<select id="kategorie" onChange= "updateMenu(this, document.getElementById('einheit1')); updateMenu(this, document.getElementById('einheit2'))">
+					<option>Fläche</option>
+					<option>Energie</option>
+					<option>Zeit</option>
+					<option>Geschwindigkeit</option>
+				</select>
+				
+			</div>
+			
+			<br>
+			<br>
+			<br>
+
+			<!--Entry fields-->
+			<div id="labels1">
+				<label for='zahleingabe'>Eingabe      </label>
+				<label for='ergebnis'>Ergebnis</label>
+			</div>
+
+			<div id="inputs">
+				<input id="zahleingabe" type = "number" maxlength="20" placeholder="Zahl eingeben" onKeyUp="calc(document.getElementById('einheit1'), document.getElementById('einheit2'), document.getElementById('zahleingabe'), document.getElementById('ergebnis'), document.getElementById('kategorie'))" ></input>
+				<input id="ergebnis" type = "number"  maxlength="12" placeholder="Ergebnis" readonly="readonly"></input>
+			</div>
+			
+			
+
+			<!--Unit fields-->
+			<div id="einheiten">
+						
+						<select id="einheit1" onChange="calc(document.getElementById('einheit1'), document.getElementById('einheit2'), document.getElementById('zahleingabe'), document.getElementById('ergebnis'), document.getElementById('kategorie'))">
+								<option>Quadratmeter</option>
+								<option>Quadratkilometer</option>
+								<option>Hektar</option>
+								<option>Quadratdezimeter</option>
+								<option>Quadratzentimeter</option>
+						</select>
+						
+
+						
+						<select id="einheit2" onChange="calc(document.getElementById('einheit1'), document.getElementById('einheit2'), document.getElementById('zahleingabe'), document.getElementById('ergebnis'), document.getElementById('kategorie'))">
+								<option>Quadratmeter</option>
+								<option>Quadratkilometer</option>
+								<option>Hektar</option>
+								<option>Quadratdezimeter</option>
+								<option>Quadratzentimeter</option>
+						</select>
+						
+			</div>
+			<div id="labels2">
+				<label for='einheit1'>Einheit1</label>
+				<label for='einheit2'>Einheit2</label>	
+			</div>
+		</div>
+		<!--New version box-->
+		<div id = "update1">Es existiert eine neuere Version.  <a id="reload" href ="">Hier klicken </a>um die Seite zu aktualisieren</div>
+	</body>
+</html>
+

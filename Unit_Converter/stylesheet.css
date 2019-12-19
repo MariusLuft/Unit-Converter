@@ -1,0 +1,136 @@
+	body{
+		background-color:#F5F89B;
+		text-align:center;
+		font-size:28px;
+		float:center;
+		}
+	#knoepfe{
+		width:960px;
+		margin: 0 auto;
+		height:auto;
+	}	
+
+	h1{
+		color:black;
+		text-decoration: underline;
+	}
+	
+	select{
+		width:272px;
+		height:45px;
+		font-size:21px;
+		padding:8px 15px;
+		background-color:#DFE6F7;
+		color:purple;	
+		float:center;
+	}
+	
+	
+	input{
+		width:240px;
+		height:30px;
+		font-size:21px;
+		padding:8px 15px;
+		background-color:#DFE6F7;
+		color:black;
+		margin-bottom:7px;
+		float:center;
+	}
+	
+	#kategorie{
+		width:300px;
+		height:60px;
+		font-size:20px;
+		padding:12px 15px;
+		background-color:#DFE6F7;
+		color:purple;
+		border:2px solid black;
+		float:center;
+	}
+
+	/* Properties Update Box */
+	#update1 {
+		visibility: hidden;
+		min-width: 250px;
+		margin-left: -125px;
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		border-radius: 2px;
+		padding: 16px;
+		position: fixed;
+		z-index: 1;
+		left: 50%;
+		bottom: 30px;
+	  }
+	  #update1.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s;
+		animation: fadein 0.5s;
+	  }
+
+		/* Animation Update Box */
+	  @-webkit-keyframes fadein {
+		from {
+		  bottom: 0;
+		  opacity: 0;
+		}
+		to {
+		  bottom: 30px;
+		  opacity: 1;
+		}
+	  }
+	  @keyframes fadein {
+		from {
+		  bottom: 0;
+		  opacity: 0;
+		}
+		to {
+		  bottom: 30px;
+		  opacity: 1;
+		}
+	  }
+	
+
+
+	/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	select{width:153px;} 
+	body{font-size:18px;
+		text-align:center;}
+	input{width:120px;}
+	#kategorie{width:150px;}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	select{width:183px;} 
+	body{font-size:22px;
+		text-align:center;}
+	input{width:150px;}
+	#kategorie{width:200px;}
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	select{width:223px;} 
+	body{font-size:25px;}
+	input{width:190px;}
+	#kategorie{width:250px;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	select{width:272px;} 
+	body{font-size:28px;}
+	input{width:240px;}
+	#kategorie{width:300px;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	select{width:272px;} 
+	body{font-size:28px;}
+	input{width:240px;}
+	#kategorie{width:300px;}
+}
